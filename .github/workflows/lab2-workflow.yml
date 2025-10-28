@@ -3,7 +3,7 @@ name: Exploring Workflow Dispatch Trigger
 on:
   workflow_dispatch:
     inputs:
-      run-job:
+      run_job:
         type: boolean
         required: false
         description: Run Specific Job
@@ -27,9 +27,10 @@ jobs:
          env:
            MESG: ${{ inputs.custom_message }}
          run: echo "$MESG"
-       - name: Printing run-job boolean value
-         if: ${{ inputs.run-job == 'true' }}
-         run: ${{ input.run-job }}
+       - name: Printing run_job boolean value
+         if: ${{ inputs.run_job == 'true' }}
+         run: ${{ input.run_job }}
+
 
 
 
